@@ -5,6 +5,7 @@ const player2Display = document.querySelector(".p2-score");
 const reset = document.querySelector("#reset");
 const counter = document.querySelector(".counter");
 const input = document.querySelector("input");
+const winner = document.querySelector(".show-winner");
 let gameOver = false;
 
 let scores = {
