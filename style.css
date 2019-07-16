@@ -34,6 +34,9 @@ body {
 }
 
 .show-winner {
+    display: inline-block;
+    width: 70vw;
+    height: 2rem;
     font-size: 2em;
     font-weight: bold;
     color: green;

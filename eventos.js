@@ -21,6 +21,7 @@ player1.addEventListener("click", function(){
     }
     if (scores.player1 === scores.max) {
         player1Display.classList.add("win");
+        winner.textContent = "Jogador 1 Ganhou!";
         gameOver = true;
     }
 })
@@ -32,6 +33,7 @@ player2.addEventListener("click", function(){
     }
     if (scores.player2 === scores.max) {
         player2Display.classList.add("win");
+        winner.textContent = "Jogador 2 Ganhou!";
         gameOver = true;
     }
 })
@@ -45,12 +47,13 @@ reset.addEventListener("click", function(){
     player1Display.classList.remove("win");
     player2Display.textContent = scores.player2;
     player2Display.classList.remove("win");
+    winner.textContent = "";
     gameOver = false;
 })
 
 input.addEventListener("click", function() {
     if (!gameOver) {
         counter.textContent = input.value;
-        scores.max = input.value;
+        scores.max = Number(input.value);
     }
 })
